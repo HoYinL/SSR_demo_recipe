@@ -1,0 +1,25 @@
+const ingrediants = [
+    {ingrediants: 'Fruits', type: 'Vegan'},
+    {ingrediants: 'Vegetable', type: 'Vegan'},
+    {ingrediants: 'Grains', type: 'Vegan'},
+    {ingrediants: 'Nuts', type: 'Vegan'},
+    {ingrediants: 'Pasta', type: 'Vegan'},
+    {ingrediants: 'Rice', type: 'Vegan'},
+    {ingrediants: 'Bean', type: 'Vegan'},
+    {ingrediants: 'Sashimi', type: 'Pescatarian'},
+    {ingrediants: 'Fillet', type: 'Pescatarian'},
+    {ingrediants: 'Supreme', type: 'Pescatarian'},
+    {ingrediants: 'Darne', type: 'Pescatarian'},
+    {ingrediants: 'Doujons', type: 'Pescatarian'},
+    {ingrediants: 'Troncons', type: 'Pescatarian'},
+    {ingrediants: 'Tails', type: 'Pescatarian'},
+    {ingrediants: 'Egg', type: 'ovo-lacto'},
+    {ingrediants: 'Milk & Milk product', type: 'ovo-lacto'},
+    {ingrediants: 'Beef', type: 'Meat'},
+    {ingrediants: 'Sausage', type: 'Meat'},
+    {ingrediants: 'Mutton', type: 'Meat'},
+    {ingrediants: 'Chicken breast', type: 'Meat'},
+    {ingrediants: 'Minced meat', type: 'Meat'},
+]
+
+export default ingrediants

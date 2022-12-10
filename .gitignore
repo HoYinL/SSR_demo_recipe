@@ -1,0 +1,10 @@
+.env
+node_modules
+public
+.babelrc
+setdatabase.js
+video.txt
+.eslintrc
+build
+
+config
