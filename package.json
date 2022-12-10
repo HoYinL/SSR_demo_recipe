@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "npm run dev",
+    "start": "webpack --config webpack.client.js ; webpack --config webpack.server.js ; node build/bundle.cjs",
     "dev": "npm-run-all --parallel dev:server build",
     "build": "webpack --config webpack.client.js && webpack --config webpack.server.js",
     "dev:server": "node build/bundle.cjs"
