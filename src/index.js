@@ -22,7 +22,6 @@ import mongoose from "mongoose";
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import theme from './common/breakpoint/index.js';
 import { MuiThemeProvider } from "@material-ui/core/styles";
-import config from './server/config/index.js';
 
 const app = express();
 
@@ -54,7 +53,7 @@ app.use('/Follower', followRoutes);
 
  // (3)
 app.get('*', (req, res) => {
-  mongoose.connect(config.database);
+  mongoose.connect(peocess.env.DATABASE);
   mongoose.Promise = global.Promise;
   let db = mongoose.connection;
   db.on('error', console.error.bind(console, 'MongoDB connection error:'));
