@@ -14,7 +14,7 @@ const LocalStrategy = passportLocal.Strategy
 const JWTStrategy = passportJwt.Strategy
 
 const app = Express();
-app.set("superSecret", config.secret);
+app.set("superSecret", process.env.SECRET);
 
 const checkPassword = (user, password) => 
     bcrypt.compare(password, user.password)
