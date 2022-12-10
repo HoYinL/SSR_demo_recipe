@@ -6,7 +6,6 @@ import { setupLoginState } from "../../common/store/loginreducer";
 import jwt_decode from "jwt-decode";
 import jwt_encode from "jwt-encode";
 import Cookies from 'js-cookie';
-import config from "../config";
 
 const baseURL = `/api/`;
 
@@ -253,7 +252,7 @@ export const modifyInformation = async ({
     const clone_jwt = {...jwt};
     clone_jwt.token_payload.username = res.data.user.username;
     clone_jwt.token_payload.description = res.data.user.description;
-    const refresh_token = jwt_encode(clone_jwt, config.secret);
+    const refresh_token = jwt_encode(clone_jwt, process.env.SECRET);
     Cookies.set('refresh_token', refresh_token, { expires: 30 * 24 * 60 * 60 });
   }).catch(res => {
     ('false');
