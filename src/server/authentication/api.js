@@ -5,10 +5,6 @@ import passportLocal from "passport-local"
 import User from "../../common/models/users";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import * as dotenv from "dotenv";
-import config from "../config";
-
-dotenv.config();
 
 const LocalStrategy = passportLocal.Strategy
 const JWTStrategy = passportJwt.Strategy
