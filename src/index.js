@@ -53,7 +53,7 @@ app.use('/Follower', followRoutes);
 
  // (3)
 app.get('*', (req, res) => {
-  mongoose.connect(peocess.env.DATABASE);
+  mongoose.connect(process.env.DATABASE);
   mongoose.Promise = global.Promise;
   let db = mongoose.connection;
   db.on('error', console.error.bind(console, 'MongoDB connection error:'));
