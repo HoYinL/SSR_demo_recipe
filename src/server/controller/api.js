@@ -23,13 +23,12 @@ import bcrypt from "bcrypt";
 import jwt_decode from "jwt-decode";
 import mongoose from 'mongoose'; // /Blog/
 import * as fs from 'fs';
-import config from '../config';
 // API Route
 const app = new Express();
 const apiRoutes = Express.Router();
 
 // 設定 JSON Web Token 的 secret variable
-app.set('superSecret', config.secret);
+app.set('superSecret', process.env.SECRET);
 
 // 回傳所有 recipes
 // LandingPage before login
